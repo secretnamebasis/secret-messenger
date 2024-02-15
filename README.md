@@ -21,8 +21,8 @@
 - **Search Field**: Easily find specific entries using the search functionality.
 
 - **Chat-style**: Create new markdown-supported, messages effortlessly, capturing your thoughts in real-time.
-
-<img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/0b0d3cca-7a37-4f5e-843f-b31d21963c46" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/b4a4aca0-2c34-4ee8-96ee-167f26dfd5cf" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/6696d8b2-3931-4134-9efd-17616e71cd3c" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/52ed2b90-1bfb-4607-912f-ceb8c1e03402" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/fee37d07-d732-4d8b-84d4-519ad9ae30b1" width="15%"></img> 
+  
+<img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/52694995-2397-49c3-914b-830dbb71ab89" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/ecfa5927-a1e6-4323-9b66-d4703cdd1720" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/7cb87326-6d45-4e81-b740-eea42c1ab9fe" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/f0ef31fe-debd-483f-b885-2558513b7476" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/436528bb-2fc9-46a6-b38d-30e07d528ed2" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-messenger/assets/86203717/a2828339-a7e9-44a3-ba42-a94e1c742e4e" width="15%"></img> 
 
 
 ## Getting Started
@@ -39,8 +39,8 @@ Grab the latest [release](https://github.com/secretnamebasis/secret-messages/rel
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/secretnamebasis/secret-journal.git
-   cd secret-journal
+   git clone https://github.com/secretnamebasis/secret-messenger.git
+   cd secret-messenger
    ```
 
 2. Build the application (make sure you have Go installed):
@@ -52,14 +52,14 @@ Grab the latest [release](https://github.com/secretnamebasis/secret-messages/rel
 3. Run the compiled binary:
 
    ```bash
-   ./secret-journal
+   ./secret-messenger
    ```
 
 
 ## Usage
 
-1. Launch the Secret Journal application.
-2. Log in to your DERO wallet RPC to access your private journal.
+1. Launch the `secret-messenger` application.
+2. Log in to your DERO wallet RPC to access your private messeges.
 3. Explore the intuitive GUI with features like the latest entries, privacy button, search field, and new entry creation.
 
 ## REVENUE NOTICE: 
