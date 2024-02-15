@@ -1,4 +1,4 @@
-module github.com/secretnamebasis/secret-journal
+module github.com/secretnamebasis/secret-messenger
 
 go 1.21.6
 
