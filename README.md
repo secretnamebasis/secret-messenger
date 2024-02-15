@@ -1,7 +1,7 @@
 
-# secret-messages
+# secret-messenger
 
-`secret-messages` is a GUI-based encrypted messages powered by [DERO](https://github.com/deroproject/derohe) homomorphically-encrypted, blockchain [technology](https://github.com/deroproject/graviton) and provides a secure and private space for users to share their thoughts, ideas, and experiences.
+`secret-messenger` is a GUI-based encrypted messenger powered by [DERO](https://github.com/deroproject/derohe) homomorphically-encrypted, blockchain [technology](https://github.com/deroproject/graviton) and provides a secure and private space for users to share their thoughts, ideas, and experiences.
 
 
 ## Configurations
