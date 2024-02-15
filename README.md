@@ -29,9 +29,9 @@
 
 ### Latest Release
 
-Grab the latest [release](https://github.com/secretnamebasis/secret-messages/releases/latest/).
+Grab the latest [release](https://github.com/secretnamebasis/secret-messenger/releases/latest/).
 
-> [android](https://github.com/secretnamebasis/secret-messages/releases/latest/) & [linux](https://github.com/secretnamebasis/secret-messages/releases/latest/) 
+> [android](https://github.com/secretnamebasis/secret-messenger/releases/latest/) & [linux](https://github.com/secretnamebasis/secret-messenger/releases/latest/) 
 
 
 ### From Source
