@@ -1,12 +1,12 @@
 
-# secret-journal
+# secret-messages
 
-`secret-journal` is a GUI-based encrypted journal powered by [DERO](https://github.com/deroproject/derohe) homomorphically-encrypted, blockchain [technology](https://github.com/deroproject/graviton) and provides a secure and private space for users to log their thoughts, ideas, and experiences.
+`secret-messages` is a GUI-based encrypted messages powered by [DERO](https://github.com/deroproject/derohe) homomorphically-encrypted, blockchain [technology](https://github.com/deroproject/graviton) and provides a secure and private space for users to share their thoughts, ideas, and experiences.
 
 
 ## Configurations
 
-**Login/Logout**: In order to login to secret-journal, you will need to have a DERO wallet running in RPC Server Mode: 
+**Login/Logout**: In order to login to secret-messages, you will need to have a DERO wallet running in RPC Server Mode: 
 - [CLI](https://github.com/deroproject/derohe/releases/latest)
 - [GUI](https://github.com/DEROFDN/Engram/releases/latest)
 
@@ -14,13 +14,13 @@
 
 ## Features
 
-- **Latest Entries**: Quickly access the most recent journal entries for a seamless experience.
+- **Latest Entries**: Quickly access the most recent messages for a seamless experience.
   
 - **Privacy Button**: Toggle the visibility of journal contents with the privacy button, ensuring enhanced confidentiality.
 
 - **Search Field**: Easily find specific entries using the search functionality.
 
-- **Chat-style**: Create new markdown-supported, journal entries effortlessly, capturing your thoughts in real-time.
+- **Chat-style**: Create new markdown-supported, messages effortlessly, capturing your thoughts in real-time.
 
 <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/0b0d3cca-7a37-4f5e-843f-b31d21963c46" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/b4a4aca0-2c34-4ee8-96ee-167f26dfd5cf" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/6696d8b2-3931-4134-9efd-17616e71cd3c" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/52ed2b90-1bfb-4607-912f-ceb8c1e03402" width="15%"></img> <img src="https://github.com/secretnamebasis/secret-journal/assets/86203717/fee37d07-d732-4d8b-84d4-519ad9ae30b1" width="15%"></img> 
 
@@ -29,9 +29,9 @@
 
 ### Latest Release
 
-Grab the latest [release](https://github.com/secretnamebasis/secret-journal/releases/latest/).
+Grab the latest [release](https://github.com/secretnamebasis/secret-messages/releases/latest/).
 
-> [android](https://github.com/secretnamebasis/secret-journal/releases/latest/) & [linux](https://github.com/secretnamebasis/secret-journal/releases/latest/) 
+> [android](https://github.com/secretnamebasis/secret-messages/releases/latest/) & [linux](https://github.com/secretnamebasis/secret-messages/releases/latest/) 
 
 
 ### From Source
