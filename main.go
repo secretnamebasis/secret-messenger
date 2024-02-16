@@ -1,5 +1,5 @@
 /*
-secret-journal: a journal stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
+secret-messenger: a messenger stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
 Copyright (C) 2024  secretnamebasis
 
 This program is free software: you can redistribute it and/or modify
@@ -76,13 +76,13 @@ func main() {
 	session.domain = appMain
 
 	ui.maxwidth = 360
-	ui.maxheight = 680
+	ui.maxheight = 400
 
 	ui.width = ui.maxwidth * 0.9
 	ui.height = ui.maxheight
-	ui.padding = ui.maxwidth * 0.5
+	ui.padding = ui.maxwidth * 0.05
 
-	resizeWindow(ui.maxwidth, ui.maxheight)
+	resizeWindow(ui.width, ui.height)
 
 	session.window.SetContent(layoutMain())
 	session.window.ShowAndRun()
