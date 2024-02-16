@@ -40,7 +40,7 @@ var (
 	truncatedOptions []string
 	options          []string
 	chunks           []string
-	version          = semver.MustParse("0.0.1")
+	version          = semver.MustParse("0.0.2")
 	versionMsg       = "secret-messenger | version: %s \n"
 	copyrightMsg     = "Copyright 2024 secretnamebasis. All rights reserved."
 	osArchGoMaxMsg   = "OS: %s ARCH: %s GOMAXPROCS: %d\n\n"
