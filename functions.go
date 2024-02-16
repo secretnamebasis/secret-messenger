@@ -624,7 +624,7 @@ func processEntrySubmission(
 	if err != nil {
 		resultLabel.SetText(
 			fmt.Sprintf(
-				"Status: Error",
+				"Status: Error %s",
 				truncateTXID(result.TXID, 4, 4),
 			),
 		)
