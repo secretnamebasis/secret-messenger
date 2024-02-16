@@ -1,5 +1,5 @@
 /*
-secret-journal: a journal stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
+secret-messenger: a messenger stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
 Copyright (C) 2024  secretnamebasis
 
 This program is free software: you can redistribute it and/or modify
@@ -18,8 +18,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package main
 
 const (
-	APP_NAME          = "secret-journal"
-	APP_ID            = "com.secret.journal"
+	APP_NAME          = "secret-messenger"
+	APP_ID            = "com.secret.messenger"
 	DEVELOPER_ADDRESS = "dero1qyvqpdftj8r6005xs20rnflakmwa5pdxg9vcjzdcuywq2t8skqhvwqglt6x0g"
 	DEFAULT_WAIT_TIME = 256
 	PAGINATION        = 20

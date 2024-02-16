@@ -1,5 +1,5 @@
 /*
-secret-journal: a journal stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
+secret-messenger: a messenger stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
 Copyright (C) 2024  secretnamebasis
 
 This program is free software: you can redistribute it and/or modify
@@ -32,27 +32,27 @@ import (
 
 var (
 	// app
-	resetCh       = make(chan struct{})
-	err           error
-	session       appSession
-	ui            appUI
-	uniqueOptions = make(map[string]bool)
-
-	options        []string
-	chunks         []string
-	version        = semver.MustParse("0.0.3")
-	versionMsg     = "secret-journal | version: %s \n"
-	copyrightMsg   = "Copyright 2024 secretnamebasis. All rights reserved."
-	osArchGoMaxMsg = "OS: %s ARCH: %s GOMAXPROCS: %d\n\n"
-	quoteMsg       = "Imitation is the sincerest form of flattery that mediocrity can pay to greatness. ― Oscar Wilde"
-	transfersMap   = make(map[string]string)
-	sortedTimes    []string
+	resetCh          = make(chan struct{})
+	err              error
+	session          appSession
+	ui               appUI
+	uniqueOptions    = make(map[string]bool)
+	truncatedOptions []string
+	options          []string
+	chunks           []string
+	version          = semver.MustParse("0.0.1")
+	versionMsg       = "secret-messenger | version: %s \n"
+	copyrightMsg     = "Copyright 2024 secretnamebasis. All rights reserved."
+	osArchGoMaxMsg   = "OS: %s ARCH: %s GOMAXPROCS: %d\n\n"
+	quoteMsg         = "Imitation is the sincerest form of flattery that mediocrity can pay to greatness. ― Oscar Wilde"
+	transfersMap     = make(map[string]string)
+	sortedTimes      []string
 	// domains
 	appLanding = "app.main.landing"
 	appMain    = "app.main"
 
 	// developer support
-	tipMsg = "secret-journal support"
+	tipMsg = "secret-messenger support"
 	tipAmt = uint64(200)
 
 	// dero

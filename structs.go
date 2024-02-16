@@ -1,5 +1,5 @@
 /*
-secret-journal: a journal stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
+secret-messenger: a messenger stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
 Copyright (C) 2024  secretnamebasis
 
 This program is free software: you can redistribute it and/or modify

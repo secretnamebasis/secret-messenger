@@ -1,5 +1,5 @@
 /*
-secret-journal: a journal stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
+secret-messenger: a messenger stored on a decentralized, homomorphically-encrypted, blockchain called DERO (https://dero.io)
 Copyright (C) 2024  secretnamebasis
 
 This program is free software: you can redistribute it and/or modify
@@ -230,10 +230,7 @@ func truncateTXID(txid string, prefixLen, suffixLen int) string {
 	return fmt.Sprintf("%s....%s", txid[:prefixLen], txid[len(txid)-suffixLen:])
 }
 
-func updateContacts(deroDestination *x.CompletionEntry, resultLabel *widget.Label) {
-	var truncatedOptions []string
-
-	data, _ := getOutgoingTransfers()
+func buildTruncatedContacts(data rpc.Get_Transfers_Result) []string {
 
 	for _, e := range data.Entries {
 		option := e.Destination
@@ -243,7 +240,7 @@ func updateContacts(deroDestination *x.CompletionEntry, resultLabel *widget.Labe
 			uniqueOptions[option] = true
 
 			// Truncate the option
-			truncatedOption := truncateAddress(option, 4, 4)
+			truncatedOption := truncateAddress(option, 4, 8)
 
 			// Check if the truncated option is not already in the map
 			if !uniqueOptions[truncatedOption] {
@@ -255,6 +252,14 @@ func updateContacts(deroDestination *x.CompletionEntry, resultLabel *widget.Labe
 			}
 		}
 	}
+	return truncatedOptions
+}
+
+func updateContacts(deroDestination *x.CompletionEntry, resultLabel *widget.Label) {
+	var truncatedOptions []string
+
+	data, _ := getAllTransfers()
+	truncatedOptions = buildTruncatedContacts(data)
 	deroDestination.SetOptions(truncatedOptions)
 }
 
@@ -456,12 +461,28 @@ func showContactWindow(
 
 		return nil
 	}
+	data := rpc.Get_Transfers_Result{}
+	// data, _ = getAllTransfers()
+	options = buildTruncatedContacts(data)
 
 	lbl := widget.NewLabel("Choose Contact")
-
+	list := widget.NewList(
+		func() int {
+			return len(options)
+		},
+		func() fyne.CanvasObject {
+			return widget.NewHyperlink("template", nil)
+		},
+		func(i widget.ListItemID, o fyne.CanvasObject) {
+			o.(*widget.Hyperlink).SetText(options[i])
+			o.(*widget.Hyperlink).OnTapped = func() {
+				deroDestination.SetText(options[i])
+			}
+			o.(*widget.Hyperlink).Refresh()
+		})
 	formWidget := container.NewGridWrap(
-		fyne.NewSize(ui.width, 45),
-		deroDestination,
+		fyne.NewSize(ui.width, ui.maxheight),
+		list,
 	)
 
 	closeButton := widget.NewButton(
@@ -481,12 +502,13 @@ func showContactWindow(
 	modalContent := container.NewCenter(
 		container.NewVBox(
 			lbl,
+			deroDestination,
 			container.NewCenter(
 				container.NewHBox(
 					formWidget,
-					closeButton,
 				),
 			),
+			closeButton,
 		),
 	)
 	modal = widget.NewModalPopUp(modalContent, w.Canvas())
@@ -744,12 +766,18 @@ func organizeTransfersByTime(entriesData []rpc.Entry) (map[string]string, map[st
 				if e.Payload_RPC.Has(rpc.RPC_COMMENT, rpc.DataString) && e.Payload_RPC.Value(rpc.RPC_COMMENT, rpc.DataString).(string) != "" {
 					if e.Payload_RPC.Has(rpc.RPC_REPLYBACK_ADDRESS, rpc.DataAddress) {
 						if e.Incoming {
-							fmt.Printf("dest addr: %s\n", destinationAddress)
-							if e.Payload_RPC.Value(rpc.RPC_REPLYBACK_ADDRESS, rpc.DataAddress).(rpc.Address).String() != destinationAddress {
+							// for incoming transfers, we need a reply back address
+							replyBackAddress := e.Payload_RPC.Value(
+								rpc.RPC_REPLYBACK_ADDRESS,
+								rpc.DataAddress,
+							).(rpc.Address).String()
+
+							if replyBackAddress != destinationAddress {
 								continue
 							}
 							userStr = e.Payload_RPC.Value(rpc.RPC_REPLYBACK_ADDRESS, rpc.DataAddress).(rpc.Address).String()
 						} else {
+							// for non-incoming transfers, we need be the user label
 							if e.Destination != destinationAddress {
 								continue
 							}

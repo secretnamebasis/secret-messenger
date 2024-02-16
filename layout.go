@@ -9,7 +9,7 @@ import (
 )
 
 func layoutMain() fyne.CanvasObject {
-	session.window.SetFixedSize(false)
+	session.window.SetFixedSize(true)
 	options := []string{}
 	deroDestination = x.NewCompletionEntry(options)
 	contentContainer.Hide()
@@ -176,20 +176,24 @@ func layoutMain() fyne.CanvasObject {
 		nil,
 		nil,
 	)
-	buttonContainer := container.NewGridWrap(
-		fyne.NewSize(ui.width*0.18, ui.maxheight*.065),
+	entryButtonContainer := container.NewGridWrap(
+		fyne.NewSize(ui.width*0.10, ui.height*.1),
 		entryButton,
+	)
+	contactButtonContainer := container.NewGridWrap(
+		fyne.NewSize(ui.width*0.10, ui.height*.1),
+		contactButton,
 	)
 
 	entryContainer := container.NewGridWrap(
-		fyne.NewSize(ui.width*0.92, ui.maxheight*.065),
+		fyne.NewSize(ui.width*0.92, ui.height*.1),
 		entryForm,
 	)
 
 	buttonsContainer := container.NewHBox(
-		contactButton,
+		contactButtonContainer,
 		entryContainer,
-		buttonContainer,
+		entryButtonContainer,
 	)
 
 	chatBarContainer := container.NewVBox(
